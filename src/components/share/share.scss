@@ -1,0 +1,104 @@
+@import "../../index.scss";
+
+.share {
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    background-color: white;
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid lightgray;
+      margin-bottom: 10px;
+
+      .left {
+        display: flex;
+        align-items: center;
+        flex: 4;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          padding: 20px 10px;
+          background-color: transparent;
+          width: 60%;
+
+          @include mobile {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        .file {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+          border-radius: 0px;
+
+          @include mobile {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+
+          span {
+            font-size: 1.2rem;
+            color: gray;
+          }
+        }
+      }
+
+      .right {
+        button {
+          border: none;
+          color: white;
+          padding: 8px;
+          font-size: 1.25rem;
+          font-weight: 500;
+          letter-spacing: 0.9px;
+          cursor: pointer;
+          background-color: rebeccapurple;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            opacity: 0.85;
+          }
+        }
+      }
+    }
+  }
+}

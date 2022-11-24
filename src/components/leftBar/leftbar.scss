@@ -1,0 +1,93 @@
+@import "../../index.scss";
+
+.leftBar {
+  flex: 1;
+  padding: 20px;
+  padding-right: 0;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: hidden;
+
+  @include tablet {
+    flex: 1.5;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &:hover {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      padding-top: 15px;
+      padding-left: 5px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      padding: 5px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgb(198, 185, 239);
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      padding: 5px;
+      gap: 10px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: rgb(198, 185, 239);
+      }
+
+      img {
+        display: block;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

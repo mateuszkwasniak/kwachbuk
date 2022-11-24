@@ -1,0 +1,106 @@
+@import "../../index.scss";
+
+.rightBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  padding: 20px;
+  height: calc(100vh - 70px);
+  overflow-y: hidden;
+  background-color: #f6f3f3;
+  &:hover {
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  .container {
+    -webkit-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+    background-color: white;
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      font-size: 1.25rem;
+      color: gray;
+      font-weight: 500;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .userInfo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .online {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: green;
+          position: absolute;
+          top: 0;
+          left: 30px;
+        }
+
+        p {
+          color: gray;
+          font-size: 1.25rem;
+        }
+
+        span {
+          color: black;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          border: none;
+          padding: 8px;
+          font-size: 1.25rem;
+          color: white;
+          font-weight: 500;
+          letter-spacing: 0.9px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            opacity: 0.85;
+          }
+          &:first-child {
+            background-color: rebeccapurple;
+          }
+          &:last-child {
+            background-color: #f0544f;
+          }
+        }
+      }
+    }
+  }
+}

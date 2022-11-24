@@ -1,0 +1,138 @@
+@import "../../index.scss";
+
+.login {
+  height: 100vh;
+  background-color: rgb(198, 185, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    height: auto;
+  }
+  .card {
+    width: 50%;
+    min-height: 60rem;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left {
+      flex: 1;
+      padding: 50px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      @include mobile {
+        padding: 30px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.55;
+        // background-image: url("../../assets/img/login3.jpg");
+        background: linear-gradient(
+            rgba(39, 11, 96, 0.5),
+            rgba(39, 11, 96, 0.5)
+          ),
+          url("../../assets/img/login3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        position: relative;
+        font-size: 7rem;
+      }
+      p {
+        width: 90%;
+        position: relative;
+        font-size: 3rem;
+      }
+      span {
+        position: relative;
+        display: block;
+        font-size: 1.8rem;
+        margin-top: 5rem;
+      }
+      button {
+        position: relative;
+        border: none;
+        padding: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rebeccapurple;
+        cursor: pointer;
+        background-color: white;
+        width: 50%;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: white;
+          background-color: rebeccapurple;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      background-color: white;
+
+      @include mobile {
+        padding: 30px;
+      }
+      h2 {
+        color: #555;
+        font-size: 4rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        input {
+          border: none;
+          border-bottom: 1px solid rgb(198, 185, 239);
+          padding: 20px 10px;
+          outline: none;
+          font-size: 1.8rem;
+          &::placeholder {
+            opacity: 0.15;
+          }
+        }
+        button {
+          border: none;
+          padding: 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+          cursor: pointer;
+          background-color: rgb(133, 93, 173);
+          width: 50%;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            background-color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import "../../index.scss";
+
+.profile {
+  background-color: #f6f3f3;
+  min-height: 100vh;
+  position: relative;
+  .userImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .coverImg {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .profileImg {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin-top: -150px;
+      border-radius: 50%;
+    }
+  }
+
+  .userDetailsContainer {
+    padding: 20px 70px;
+
+    @include tablet {
+      padding: 15px;
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    .userDetails {
+      height: 280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      padding: 0 150px;
+      margin-top: -150px;
+      margin-bottom: 50px;
+      -webkit-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+      -moz-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+      box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+      background-color: white;
+
+      @include mobile {
+        flex-direction: column;
+        height: 40vh;
+        padding: 20px;
+        margin-top: 20px;
+        gap: 10px;
+      }
+
+      @include tablet {
+        padding: 20px;
+      }
+
+      .left {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+
+        @include tablet {
+          flex-wrap: wrap;
+        }
+
+        a {
+          color: black;
+        }
+      }
+
+      .mid {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+        gap: 10px;
+
+        @include mobile {
+          margin-top: 0;
+        }
+        span {
+          font-size: 3rem;
+          font-weight: 500;
+        }
+
+        .userInfo {
+          width: 100%;
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          justify-content: center;
+
+          .item {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            color: gray;
+            span {
+              font-size: 2rem;
+            }
+          }
+        }
+
+        button {
+          border: none;
+          background-color: rgb(198, 185, 239);
+          color: #333;
+          font-size: 1.7rem;
+          font-weight: 500;
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin-top: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: rebeccapurple;
+            color: white;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+
+        @include mobile {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}

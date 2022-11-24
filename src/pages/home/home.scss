@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.home {
+  background-color: #f6f3f3;
+  padding: 20px 70px;
+  min-height: 100vh;
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  @include mobile {
+    padding: 10px;
+  }
+}

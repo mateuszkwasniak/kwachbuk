@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.stories {
+  display: flex;
+  gap: 10px;
+  height: 300px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    height: 200px;
+  }
+
+  @include mobile {
+    height: 160px;
+    gap: 3px;
+  }
+
+  .story {
+    flex: 1;
+    // width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    span {
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: 3px;
+      left: 3px;
+      color: white;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 10px;
+      background-color: rgba(51, 51, 51, 0.374);
+
+      @include mobile {
+        left: 50%;
+        transform: translatex(-50%);
+        font-size: 0.6rem;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 10px;
+      bottom: 40px;
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      border: none;
+      background-color: rgb(198, 185, 239);
+      color: #333;
+      font-size: 2.2rem;
+      //   font-weight: bold;
+
+      -webkit-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+      -moz-box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+      box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.27);
+
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      @include tablet {
+        bottom: 60px;
+      }
+
+      @include mobile {
+        left: 50%;
+        transform: translatex(-50%);
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        background-color: rebeccapurple;
+        color: white;
+      }
+    }
+  }
+}

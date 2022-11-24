@@ -1,0 +1,166 @@
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$darkTheme: (
+  textColor: whitesmoke,
+  bg: #222,
+  logo: white,
+  bgSoft: #333,
+  textColorSoft: lightgray,
+  border: #444,
+);
+
+.darkTheme {
+  .navbar {
+    background-color: map.get($darkTheme, "bg") !important;
+    color: map.get($darkTheme, "textColorSoft") !important;
+    border-color: map.get($darkTheme, "border") !important;
+    .searchResults {
+      background-color: map.get($darkTheme, "bg") !important;
+      .searchedUser {
+        color: map.get($darkTheme, "textColor") !important;
+      }
+    }
+
+    .logo {
+      color: map.get($darkTheme, "logo") !important;
+    }
+
+    .search {
+      border-color: map.get($darkTheme, "border") !important;
+      input {
+        background-color: map.get($darkTheme, "bg") !important;
+        color: map.get($darkTheme, "textColorSoft") !important;
+      }
+    }
+  }
+
+  .leftBar {
+    background-color: map.get($darkTheme, "bg") !important;
+    color: map.get($darkTheme, "textColor") !important;
+
+    .menu {
+      border-color: map.get($darkTheme, "border") !important;
+
+      .user {
+        &:hover {
+          color: #333 !important;
+        }
+      }
+
+      .item {
+        &:hover {
+          color: #333 !important;
+        }
+      }
+
+      .title {
+        color: map.get($darkTheme, "textColorSoft") !important;
+      }
+    }
+  }
+
+  .home,
+  .profile {
+    background-color: map.get($darkTheme, "bgSoft") !important;
+
+    .share {
+      .container {
+        background-color: map.get($darkTheme, "bg") !important;
+        color: map.get($darkTheme, "textColorSoft") !important;
+        .top {
+          border-color: map.get($darkTheme, "border") !important;
+        }
+        input {
+          color: map.get($darkTheme, "textColor") !important;
+        }
+      }
+    }
+
+    .post {
+      background-color: map.get($darkTheme, "bg") !important;
+      color: map.get($darkTheme, "textColorSoft") !important;
+
+      .userInfo {
+        .details {
+          .name {
+            color: map.get($darkTheme, "textColor") !important;
+          }
+        }
+      }
+    }
+
+    .comments {
+      .writeComment {
+        input {
+          color: map.get($darkTheme, "textColor") !important;
+          border-color: map.get($darkTheme, "border") !important;
+        }
+      }
+      .info {
+        span {
+          color: map.get($darkTheme, "textColor") !important;
+        }
+      }
+    }
+  }
+
+  .profile {
+    .userDetails {
+      background-color: map.get($darkTheme, "bg") !important;
+      color: map.get($darkTheme, "textColorSoft") !important;
+
+      .left {
+        a {
+          color: map.get($darkTheme, "textColorSoft") !important;
+        }
+      }
+    }
+  }
+
+  .rightBar {
+    background-color: map.get($darkTheme, "bgSoft") !important;
+    .container {
+      background-color: map.get($darkTheme, "bg") !important;
+
+      span {
+        color: map.get($darkTheme, "textColorSoft") !important;
+      }
+
+      .user {
+        .userInfo {
+          span {
+            color: map.get($darkTheme, "textColor") !important;
+          }
+
+          p {
+            color: map.get($darkTheme, "textColorSoft") !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+} ;

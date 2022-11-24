@@ -1,0 +1,86 @@
+.comments {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .writeComment {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 30px;
+      flex: 5;
+
+      input {
+        padding: 10px;
+        width: 50%;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: transparent;
+        outline: none;
+      }
+
+      button {
+        border: none;
+        background-color: rebeccapurple;
+        color: white;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+
+  .comment {
+    width: 100%;
+
+    display: flex;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      //   flex-shrink: 0;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 5;
+      span {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .date {
+      flex: 1;
+      font-size: 1.1rem;
+      text-align: end;
+    }
+  }
+}
